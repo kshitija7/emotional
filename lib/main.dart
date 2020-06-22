@@ -45,16 +45,14 @@ TickerProviderStateMixin{
 
         
         Container(
-          
-          
 
-          height:MediaQuery.of(context).size.height*0.7,
+          height:MediaQuery.of(context).size.height*0.8,
           child:TinderSwapCard (
             orientation:AmassOrientation.TOP,
             totalNum:5,
             stackNum: 4,
             maxWidth: MediaQuery.of(context).size.width*0.7,
-            maxHeight:MediaQuery.of(context).size.width*0.7,
+            maxHeight:MediaQuery.of(context).size.height*0.8,
             minWidth: MediaQuery.of(context).size.width*0.6,
             minHeight:MediaQuery.of(context).size.width*0.6,
             
@@ -62,19 +60,11 @@ TickerProviderStateMixin{
             cardBuilder: (context,index)=>Column(
               children: <Widget>[
                 Card(
-                  
-                  
-                  child:Padding(
+                  child:Container(
                     padding: EdgeInsets.all(10.0),
-                    
+                    height: MediaQuery.of(context).size.height*0.4,
                     child:  Emotion(
-                      
-                    
-                  ) ,
-                  
-                  
-
-                     
+                  )
                   )),
               ],
             )  

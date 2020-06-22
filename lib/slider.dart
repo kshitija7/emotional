@@ -12,7 +12,7 @@ class Emotion extends StatelessWidget {
             children: <Widget>[
               Container(
                   
-                
+                height:200,
                     child: SliderContainer(
                      
                     ),
@@ -46,7 +46,8 @@ class _SliderContainerState extends State<SliderContainer> {
   RangeValues values = RangeValues(_lowervalue, _uppervalue);
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Scaffold(
+      body:Column(
       children: <Widget>[
         Text('${questions[index]}'),
         
@@ -75,11 +76,11 @@ class _SliderContainerState extends State<SliderContainer> {
                     brightness = val;
                   });
                 }),
-                height: 200,
+                height: 50,
                 width: 400,
           ),
         ),
       ],
-    );
+    ));
   }
 }
